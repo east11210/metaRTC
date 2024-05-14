@@ -31,7 +31,7 @@ class YangAudioPlay:public YangThread
         void setAudioBuffer(YangAudioPlayBuffer *paudioList);
         void setAecBase(YangRtcAec* pace);
         int32_t m_aecInit=0;
-        int32_t m_isStart;
+        volatile int32_t m_isStart;
         void stop();
         YangAudioRenderData m_audioData;
     protected:

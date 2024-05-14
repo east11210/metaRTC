@@ -21,8 +21,8 @@ public:
 	void putMessage(YangSysMessageI *handle,int32_t pst, int32_t puid, int32_t handleState,void* user=NULL);
 
 	static YangSysMessageHandle* m_instance;
-	yangbool m_isStart;
-	yangbool m_loop;
+	volatile yangbool m_isStart;
+    volatile yangbool m_loop;
 	void stop();
 protected:
 	void run();

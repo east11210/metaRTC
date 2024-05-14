@@ -97,7 +97,7 @@ void YangPushMessageHandle::handleMessage(YangSysMessage *mss) {
 
 	if (mss->handle) {
 		if (ret)
-			mss->handle->failure(ret);
+			mss->handle->failure(ret, YangSysMessageI::PEER_PUSH);
 		else
 			mss->handle->success();
 	}

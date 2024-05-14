@@ -65,7 +65,7 @@ private:
 #endif
 public:
 	void stop();
-	int32_t m_isStart;
+    volatile int32_t m_isStart;
 protected:
 	void run();
 #if Yang_Enable_Vr
@@ -76,7 +76,7 @@ protected:
 	void stopLoop();
 	void initVr();
 
-	int32_t m_isConvert;
+    volatile int32_t m_isConvert;
 public:
 	int32_t initAudio(YangPreProcess *pp);
 	void startAudioCapture();

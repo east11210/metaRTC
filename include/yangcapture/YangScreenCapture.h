@@ -15,7 +15,7 @@ public:
 	YangScreenCapture();
 	virtual ~YangScreenCapture();
 
-	int32_t m_isStart;
+    volatile int32_t m_isStart;
 
 public:
 	virtual void setDrawmouse(bool isDraw)=0;

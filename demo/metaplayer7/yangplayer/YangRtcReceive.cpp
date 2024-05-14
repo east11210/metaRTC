@@ -193,7 +193,7 @@ void YangRtcReceive::startLoop() {
     int32_t err=m_url?m_recv->connectWhipWhepServer(&m_recv->peer,m_url):m_recv->connectSfuServer(&m_recv->peer);
     if (err!=Yang_Ok) {
 		m_loops=0;
-		if(m_message) m_message->failure(err);
+		if(m_message) m_message->failure(err, YangSysMessageI::PEER_PLAY);
 	}else{
 		if(m_message) m_message->success();
 	}

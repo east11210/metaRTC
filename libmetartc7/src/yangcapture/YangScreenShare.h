@@ -22,7 +22,7 @@ public:
 	void initstamp();
 	void stopLoop();
 private:
-	int32_t m_isloop;
+    volatile int32_t m_isloop;
 	int32_t m_isCapture;
 	int32_t m_interval;
 	YangScreenCaptureHandleI *m_capture;

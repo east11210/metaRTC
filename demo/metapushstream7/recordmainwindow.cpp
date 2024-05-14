@@ -44,6 +44,7 @@ RecordMainWindow::RecordMainWindow(QWidget *parent)
     m_context->avinfo.rtc.rtcLocalPort=10000+yang_random()%15000;
 
     m_videoType=Yang_VideoSrc_Camera;//Yang_VideoSrc_Camera/Yang_VideoSrc_Screen;
+//    m_videoType=Yang_VideoSrc_Screen;
 
     m_isStartpush=0;
 
@@ -212,7 +213,7 @@ void RecordMainWindow::init() {
 void RecordMainWindow::success(){
 
 }
-void RecordMainWindow::failure(int32_t errcode){
+void RecordMainWindow::failure(int32_t errcode, int32_t peer){
       ui->m_l_err->setText("push error("+QString::number(errcode)+")!");
 }
 

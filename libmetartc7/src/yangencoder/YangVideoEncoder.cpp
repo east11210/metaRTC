@@ -12,7 +12,7 @@ YangVideoEncoder::YangVideoEncoder() {
 }
 
 YangVideoEncoder::~YangVideoEncoder() {
-	if(m_vbuffer) delete m_vbuffer;
+	if(m_vbuffer) delete [] m_vbuffer;
 	m_vbuffer=NULL;
 }
 

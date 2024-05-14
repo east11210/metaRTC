@@ -8,10 +8,14 @@
 
 class YangSysMessageI {
 public:
+    enum {
+        PEER_PLAY,
+        PEER_PUSH,
+    };
 	YangSysMessageI(){};
 	virtual ~YangSysMessageI(){};
 	virtual void success()=0;
-	virtual void failure(int32_t errcode)=0;
+	virtual void failure(int32_t errcode, int peer)=0;
 };
 struct YangSysMessage {
 	int32_t uid;

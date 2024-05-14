@@ -24,7 +24,7 @@ protected:
 	void stopLoop();
 
 private:
-	 int32_t m_loops;
+    volatile int32_t m_loops;
 
 private:
 

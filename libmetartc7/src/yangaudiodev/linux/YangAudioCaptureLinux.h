@@ -36,7 +36,7 @@ protected:
 private:
 	YangAVInfo *m_avinfo;
 	int32_t m_size;
-	int32_t m_loops;
+	volatile int32_t m_loops;
 	int32_t m_channel;
 	uint32_t  m_sample;
 	int32_t  m_readN ;

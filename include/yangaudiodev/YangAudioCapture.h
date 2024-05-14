@@ -22,7 +22,7 @@ class YangAudioCapture:public YangThread
     public:
 
         int32_t aIndex;
-        yangbool m_isStart;
+        volatile yangbool m_isStart;
         virtual int32_t init()=0;
         virtual void setCatureStart()=0;
         virtual void setCatureStop()=0;

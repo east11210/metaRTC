@@ -33,7 +33,7 @@ public:
 	int32_t receiveMsg(YangFrame* msgFrame);
 	int32_t m_netState;
 	int32_t isPublished;
-	int32_t m_isStart;
+    volatile int32_t m_isStart;
 	void stop();
 protected:
 	void run();
@@ -45,7 +45,7 @@ protected:
 	YangVideoEncoderBuffer *m_in_videoBuffer;
 	YangAudioEncoderBuffer *m_in_audioBuffer;
 
-	int32_t m_isConvert;
+    volatile int32_t m_isConvert;
 	int32_t m_isInit;
 	int32_t m_audioEncoderType;
 	std::vector<YangPeerConnection2*> m_pushs;

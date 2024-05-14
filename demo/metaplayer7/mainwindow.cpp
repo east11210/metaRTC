@@ -88,7 +88,7 @@ MainWindow::~MainWindow()
 void MainWindow::success(){
 
 }
-void MainWindow::failure(int32_t errcode){
+void MainWindow::failure(int32_t errcode, int32_t peer){
     emit RtcConnectFailure(errcode);
 
 

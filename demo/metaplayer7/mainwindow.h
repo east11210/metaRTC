@@ -38,7 +38,7 @@ public:
     void initVideoThread(YangRecordThread *prt);
 
     void success();
-    void failure(int32_t errcode);
+    void failure(int32_t errcode, int32_t peer);
 
     signals:
        void RtcConnectFailure(int errcode);

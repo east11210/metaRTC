@@ -71,7 +71,7 @@ private:
 	int32_t playDeviceState=1;
 	int32_t catpureDeviceState = 1;
 	int32_t m_size;
-	yangbool m_loops;
+    volatile yangbool m_loops;
 	int32_t m_captureChannel;
 	uint32_t  m_captureSample;
 	uint32_t m_sample,m_channel;

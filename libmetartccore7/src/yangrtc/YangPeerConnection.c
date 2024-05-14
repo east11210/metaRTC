@@ -81,6 +81,7 @@ static int32_t yang_pc_stopRtc(YangPeer* peer){
 		return Yang_Ok;
 	conn->session->context.state = Yang_Conn_State_Disconnected;
 	if(conn->onConnectionStateChange) conn->onConnectionStateChange(conn->session,Yang_Conn_State_Disconnected);
+    printf("yang_pc_stopRtc\n\n");
 	yang_trace("\nwebrtc disconnected\n");
 	conn->close(conn->session);
 	yang_destroy_rtcConnection(conn);

@@ -50,7 +50,7 @@ public:
 public:
     void initPreview();
     void success();
-    void failure(int32_t errcode);
+    void failure(int32_t errcode, int32_t peer);
     void receiveSysMessage(YangSysMessage *psm, int32_t phandleRet);
     void initVideoThread(YangRecordThread *prt);
     void closeEvent( QCloseEvent * event );

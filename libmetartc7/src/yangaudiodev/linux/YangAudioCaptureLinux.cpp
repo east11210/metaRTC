@@ -231,7 +231,7 @@ void YangAudioCaptureLinux::startLoop() {
 	struct pollfd *pfds = (pollfd*) yang_malloc(sizeof(struct pollfd) * nfds);
 	pfds[0]=read_fd[0];
 	while (m_loops) {
-		poll(pfds, nfds, -1);
+		poll(pfds, nfds, 500);
 		if (alsa_device_capture_ready(pfds, nfds)) {
 			alsa_device_read((short*) m_buffer, m_frames);
 

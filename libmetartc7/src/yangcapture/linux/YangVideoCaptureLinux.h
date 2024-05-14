@@ -61,7 +61,7 @@ private:
 	struct v4l2_buffer m_buf;
 	buffer_type m_user_buffer[REQ_BUF_NUM];
 	int32_t m_buffer_count;
-	int32_t m_isloop;
+    volatile int32_t m_isloop;
 	int32_t m_isFirstFrame;
 	struct timeval m_startTime;
 	long m_timestatmp;
